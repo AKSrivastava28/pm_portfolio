@@ -103,9 +103,13 @@ export const ControlRoom: React.FC = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <button className={`${styles.cta} ${styles.ctaPrimary}`}>
+          <a
+            href="#experience"
+            className={`${styles.cta} ${styles.ctaPrimary}`}
+            style={{ display: 'inline-block', textDecoration: 'none', textAlign: 'center' }}
+          >
             Explore Work →
-          </button>
+          </a>
         </motion.div>
       </div>
 
