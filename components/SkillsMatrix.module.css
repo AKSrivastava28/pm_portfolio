@@ -1,0 +1,196 @@
+/* SkillsMatrix.module.css - Skills Dashboard Styling */
+
+.skillsMatrixSection {
+  padding: 4rem 2rem;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.2) 0%, rgba(15, 23, 42, 0) 100%);
+}
+
+.sectionHeader {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #10b981;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.columnsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  width: 100%;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.skillsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid transparent;
+  transition: all 300ms ease;
+
+  &.border-cyan {
+    border-top-color: rgba(0, 242, 254, 0.3);
+  }
+
+  &.border-green {
+    border-top-color: rgba(16, 185, 129, 0.3);
+  }
+}
+
+.columnTitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #f1f5f9;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+.groupsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skillGroupCard {
+  padding: 1.5rem;
+  background: rgba(15, 23, 42, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid transparent;
+  border-radius: 12px;
+  transition: all 300ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  cursor: pointer;
+
+  &.accent-cyan {
+    &:hover {
+      border-left-color: #00f2fe;
+      background: rgba(15, 23, 42, 0.7);
+      box-shadow: 0 0 24px rgba(0, 242, 254, 0.1);
+    }
+  }
+
+  &.accent-green {
+    &:hover {
+      border-left-color: #10b981;
+      background: rgba(15, 23, 42, 0.7);
+      box-shadow: 0 0 24px rgba(16, 185, 129, 0.1);
+    }
+  }
+}
+
+.groupTitle {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #cbd5e1;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skillItem {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.checkmark {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 6px;
+  color: #10b981;
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-top: 0.25rem;
+}
+
+.skillContent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.skillTitle {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0;
+}
+
+.skillDescription {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .skillsMatrixSection {
+    padding: 3rem 2rem;
+  }
+
+  .columnsContainer {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .skillsMatrixSection {
+    padding: 2rem 1rem;
+  }
+
+  .sectionTitle {
+    font-size: 1.25rem;
+  }
+
+  .columnTitle {
+    font-size: 1.125rem;
+  }
+
+  .skillGroupCard {
+    padding: 1.25rem;
+  }
+
+  .groupTitle {
+    font-size: 0.9rem;
+  }
+
+  .skillTitle {
+    font-size: 0.9rem;
+  }
+
+  .skillDescription {
+    font-size: 0.8rem;
+  }
+}
