@@ -104,7 +104,9 @@ export const ControlRoom: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.6 }}
         >
           <a
-            href="#experience"
+            href="https://drive.google.com/file/d/1_WcyVatVT3tJUeOUhFdwHb74I5xlCky-/view?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
             className={`${styles.cta} ${styles.ctaPrimary}`}
             style={{ display: 'inline-block', textDecoration: 'none', textAlign: 'center' }}
           >
